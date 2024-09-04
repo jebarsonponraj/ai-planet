@@ -4,7 +4,7 @@ This is a brief guide to help you run this GroTube app with its dependencies. Pl
 
 ## Live Site
 
-For a live demo of the app, visit: [https://jebarsonponraj.github.io/stones2milestones/](https://ai-planet-jeb.vercel.app/)
+For a live demo of the app, visit: [https://ai-planet-jeb.vercel.app/](https://ai-planet-jeb.vercel.app/)
 
 ## Prerequisites
 
