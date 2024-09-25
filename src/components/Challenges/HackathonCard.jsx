@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import tick from "../../assets/icons/tick.svg"
 
 const HackathonCard = ({ hackathon }) => {
-    const { id, title, startDate, endDate, image, level, status } = hackathon;
+    const { id, title, startDate, endDate, image, status } = hackathon;
   const [remainingTime, setRemainingTime] = useState('');
 
     const navigate = useNavigate();

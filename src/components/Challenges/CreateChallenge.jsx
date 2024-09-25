@@ -16,7 +16,6 @@ const CreateChallenge = () => {
     endDate: '',
     status: '',
     description: '',
-    level: '',
     image: ''
   });
 
@@ -184,7 +183,7 @@ const CreateChallenge = () => {
             <div className="mt-4">
               <img src={formData.image} alt="Selected" className="w-1/2 h-auto rounded" />
               <label htmlFor="image" className="mt-4 flex gap-1 items-center cursor-pointer">
-                <img src={image} alt="Change image" className="w-4 h-4" />
+                <img src={image} alt="TestImage" className="w-4 h-4" />
                 <span className='text-[#44924C]'>Change image</span>
                 <img src={arrow} alt="arrow" className="w-3 h-3" />
               </label>

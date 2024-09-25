@@ -92,6 +92,7 @@ const HackathonList = () => {
   const [selectedFilters, setSelectedFilters] = useState([]);
   const [hackathonsData, setHackathonsData] = useState([]);
   const [sortOrder, setSortOrder] = useState('');
+  const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
     const storedHackathons = localStorage.getItem('hackathonsData');
@@ -154,10 +155,16 @@ const HackathonList = () => {
     setSortOrder(e.target.value);
   };
 
+  const handleSearchChange = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
   const filteredHackathons = hackathonsData.filter(hackathon => {
     const statusFilter = filters.status.All || filters.status[hackathon.status];
     const levelFilter = filters.level.All || filters.level[hackathon.level];
-    return statusFilter && levelFilter;
+    const searchFilter = hackathon.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         hackathon.description.toLowerCase().includes(searchTerm.toLowerCase());
+    return statusFilter && levelFilter && searchFilter;
   });
 
   const sortedHackathons = filteredHackathons.sort((a, b) => {
@@ -185,6 +192,8 @@ const HackathonList = () => {
                   type="text"
                   placeholder="Search"
                   className="w-full p-2 pl-8 rounded-md"
+                  value={searchTerm}
+                  onChange={handleSearchChange}
                 />
                 <img
                   src={search}
