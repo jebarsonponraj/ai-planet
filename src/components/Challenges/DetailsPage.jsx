@@ -57,7 +57,7 @@ const DetailsPage = () => {
         </div>
         <h1 className="text-4xl font-bold mb-4 text-white">{challengeData.title}</h1>
         
-        <div className="flex items-center bg-white text-black p-2 rounded-md mb-4 inline-flex">
+        <div className="flex items-center bg-white text-black p-2 rounded-md mb-4">
           <img src={levelIcon} alt="Level" className="mr-2" />
           <span>{challengeData.level}</span>
         </div>
